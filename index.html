@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Press</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        button {
+            background-color: gray;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkgray;
+        }
+        .display-box {
+            margin-top: 20px;
+            padding: 10px;
+            border: 2px solid white;
+            display: inline-block;
+            min-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button onclick="displayMessage('Start')">Start</button>
+        <button onclick="displayMessage('Stop')">Stop</button>
+        <div class="display-box" id="displayBox">Press a button</div>
+    </div>
+
+    <script>
+        function displayMessage(message) {
+            document.getElementById('displayBox').textContent = message + " button pressed";
+        }
+    </script>
+</body>
+</html>
